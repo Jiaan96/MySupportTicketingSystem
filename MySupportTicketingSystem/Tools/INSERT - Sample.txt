@@ -1,0 +1,26 @@
+USE MYSUPPORTTICKETINGSYSTEM;
+
+INSERT INTO USERS (USERID, USERNAME, PASSWORD)
+VALUES('ADMIN', 'Administrator', 'ADMIN'),
+	('AGENT1', 'Agent 1', 'AGENT1'),
+	('JIAAN', 'Lee Jia An', 'JIAAN');
+
+INSERT INTO TICKETINGMASTER (PRODUCT, CLIENTNAME, CONTACTNO, EMAILADDRESS, AGENTID, SUBJECT, TICKETDESCRIPTION, CREATEDTIME, COMPLETEDTIME)
+VALUES('XXX Machine', 'Nick', '019-345 6788', 'Nick@gmail.com', 'JIAAN', 'Machine not functioning', 'done send back to factory for repair, and deliver back to customer', '2023-06-14 15:23:59', '2023-06-19 12:03:44'),
+	('XXX Receipt Printer', 'Alvin', '010-3456 7880', 'Alvin@gmail.com', 'ADMIN', 'Why printer is blinking red light', NULL , '2023-06-15 15:23:59', NULL),
+	('YYY Machine', 'Jack', '012-345 6789', 'Jack@gmail.com', 'AGENT1', 'Machine is not working', 'sending back to factory for repair', '2023-06-16 13:23:44', NULL),
+	('XXX Software', 'Zack', '014-312 7089', 'Zack@gmail.com', 'AGENT1', 'Request to increase length for description field', 'done increase length for description field', '2023-06-16 13:59:44', '2023-06-20 14:10:17'),
+	('ZZZ Machine', 'Kelvin', '017-311 7090', 'Kelvin@gmail.com', 'UNASSIGNED', 'Machine model is wrong', NULL, '2023-06-17 10:19:24', NULL),
+	('XXX Printer', 'Nick', '019-345 6788', 'Nick@gmail.com', 'JIAAN', 'Cannot use printer', 'Reinstall driver and restart printer spooler', '2023-06-17 15:23:59', '2023-06-17 16:00:18'),
+	('YYY Receipt Printer', 'Alvin', '010-3456 7880', 'Alvin@gmail.com', 'ADMIN', 'Printer didn''t print receipt fully', NULL , '2023-06-18 15:23:59', NULL),
+	('YYY Printer', 'Jack', '012-345 6789', 'Jack@gmail.com', 'JIAAN', 'Cannot USE Printer', 'Done reinstall driver, waiting customer response', '2023-06-20 13:23:44', NULL),
+	('YYY Software', 'Zack', '014-312 7089', 'Zack@gmail.com', 'UNASSIGNED', 'Cannot Login', NULL, '2023-06-20 13:59:44', NULL),
+	('ZZZ Software', 'Kelvin', '017-311 7090', 'Kelvin@gmail.com', 'UNASSIGNED', 'How to create user in ZZZ software', NULL, '2023-06-21 10:19:24', NULL),
+	('XXX Barcode Printer', 'Nick', '019-345 6788', 'Nick@gmail.com', 'ADMIN', 'printed out barcode cannot scan', 'set the barcode print out using CODE 128 format' , '2023-06-21 15:23:59', '2023-06-21 16:20:09'),
+	('XXX Laptop', 'Alvin', '010-3456 7880', 'Alvin@gmail.com', 'AGENT1', 'battery broken', 'place order for battery, then replace the battery for the laptop once arrive' , '2023-06-22 09:31:15', NULL);
+
+INSERT INTO KNOWLEDGEBASE (TITLE, DESCRIPTION, UPDATEDBY, UPDATEDTIME)
+VALUES('Barcode cannot scan', 'Solutin 1 : check the scanner and barcode printer and make sure both are using same format, e.g. Code 128
+Solution 2: Clean the catridge and try again ', 'JIAAN', '2023-03-05 10:02:05'),
+	('Create user in ZZZ software', 'First, go to AAA, then go to BBB and click Create New User, enter your ID, Name, Password, and confirm password and click save', 'JIAAN', '2023-03-12 11:05:06'),
+	('Receipt not print out fully', 'Go to Control Panel > Device and Printer, then look for the printer, check the printer propertise, printer preference, and printing default and make sure the paper size is the longest', 'JIAAN', '2023-03-15 15:15:16');

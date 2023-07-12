@@ -1,0 +1,1 @@
+<p>Copyright &copy; 2023 My Support Ticketing System. All rights reserved.</p>
